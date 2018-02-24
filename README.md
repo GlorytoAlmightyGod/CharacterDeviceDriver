@@ -10,6 +10,8 @@ Functions/Features
 
   - Creates a Character Device Driver which can contain upto 256 characters although this **can be changed** easily according to user requirements!
   
+  - You **don't have to worry*** about allocating Major and Minor numbers, this program finds available numbers and creates driver.
+  
 Installation
   
   - Open terminal, navigate to the directory wherein all files are saved and run these commands.
