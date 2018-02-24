@@ -1,0 +1,27 @@
+Makefile should be the name of the make file!
+
+uname -r gives current version of linux kernel!
+
+PWD gives path to current working directory!
+
+exit function of a module must be of type void!
+
+in make file := represents initialization of object!
+whereas      += represents assignment of an object!
+
+insmod is used to load modules in the kernel!
+
+rmmod is used to remove modules from the kernel!
+
+/var/log/syslog is log file for the kernel on system!
+
+/proc/devices contains char & block devices loaded in the current kernel along with major number!
+
+mknod is used to create device specific files!
+
+Atomic, meaning that the entire operation happens at once as far as other threads of execution are concerned!
+An Atomic context is simply a state where multiple steps must be performed without any sort of concurrent access.
+
+Be damn careful while passing extra arguement to ioctl & also choosing numbers while using ioctl!
+
+Incase of any problem in system's performance just reboot.

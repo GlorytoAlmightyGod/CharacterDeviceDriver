@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#Removing modules from kernel
+sudo rmmod chardriver.ko
+sudo rmmod hello.ko
+
+#Removing unnecessary files
+make -C /lib/modules/$(uname -r)/build M=$PWD clean
+
+sudo rm -rf /dev/char_dev_file
+sudo rm -rf major_number
+sudo rm -rf user_read
+sudo rm -rf user_write

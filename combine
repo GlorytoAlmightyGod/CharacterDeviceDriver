@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#granting permissions to the cache remover
+chmod +x remove
+
+#building the makefile
+make -C /lib/modules/$(uname -r)/build M=$PWD modules
+
+#inserting modules in kernel
+sudo insmod hello.ko
+sudo insmod chardriver.ko
+
+
+#getting major number dynamically; as it was varying as either 242 or 243
+grep -R "character_device" /proc/devices > major_number
+maj=$(sed 's/[^0-9]//g' major_number)
+
+#creating a device specific file using dynamically extracted major number giving access to everybody
+sudo mknod -m 666 /dev/char_dev_file c $maj 0
+
+#compiling the reading & writing applications in user space
+gcc read.c -o user_read
+gcc write.c -o user_write
+
