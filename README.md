@@ -16,7 +16,7 @@ Installation
   
   - Open terminal, navigate to the directory wherein all files are saved and run these commands.
   
-  - "chmod +x combine" (Only required for the )
+  - "chmod +x combine"
   
 How to Use?
 
